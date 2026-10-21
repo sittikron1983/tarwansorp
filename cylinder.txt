@@ -1,0 +1,3 @@
+A cylinder is a fundamental 3D shape in geometry, which has two parallel circular bases at equal distances. LPG gas cylinder is one such example of a cylinder in real life.
+
+The radius of a cylinder (r) is the radius of the 2 bases found at the top and the bottom of the cylinder. The height of the cylinder (h) is the distance between the two circular bases is called the. The volume of the cylinder (v) can be derived as shown in the picture below.

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cylinder - Volume Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="layout">
+    <!-- Block 1: heading and 2 paragraphs -->
+    <section class="block introduction" aria-labelledby="main-heading">
+      <h1 id="main-heading">Cylinder</h1>
+      <p>A cylinder is a fundamental 3D shape in geometry, which has two parallel circular bases at equal distances. LPG gas cylinder is one such example of a cylinder in real life.</p>
+      <p>The radius of a cylinder (r) is the radius of the 2 bases found at the top and the bottom of the cylinder. The height of the cylinder (h) is the distance between the two circular bases is called the. The volume of the cylinder (v) can be derived as shown in the picture below.</p>
+    </section>
+
+    <!-- Block 2: image exactly 150px tall and 2-line caption with link -->
+    <section class="block tank" aria-label="Cylinder tank">
+      <img src="tank.jpg" alt="Large cylindrical metal storage tanks" height="150">
+      <p>Cylinder tank<br>Source: <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Pixabay</a></p>
+    </section>
+
+    <!-- Block 3: heading and image exactly 150px tall -->
+    <section class="block diagram" aria-labelledby="diagram-heading">
+      <h2 id="diagram-heading">Cylinder volume</h2>
+      <img src="cylinder.png" alt="Cylinder diagram showing height h, radius r, and volume pi times r squared times h" height="150">
+    </section>
+
+    <!-- Block 4: form and space for JavaScript result -->
+    <section class="block calculator" aria-labelledby="calculator-heading">
+      <h2 id="calculator-heading">Volume calculator</h2>
+      <form id="volume-form" novalidate>
+        <div class="field">
+          <label for="radius">Radius:</label>
+          <input id="radius" name="radius" type="number" min="0" step="any" inputmode="decimal" required>
+        </div>
+        <div class="field">
+          <label for="height">Height:</label>
+          <input id="height" name="height" type="number" min="0" step="any" inputmode="decimal" required>
+        </div>
+        <div class="field">
+          <label for="unit">Unit:</label>
+          <select id="unit" name="unit">
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+          </select>
+        </div>
+        <button type="submit">Calculate</button>
+      </form>
+      <p id="result" class="result" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>

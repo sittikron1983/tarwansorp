@@ -1,0 +1,32 @@
+/* Mobile-first: introductory text across top, two distinct image blocks side by side, calculator below. */
+* { box-sizing: border-box; }
+html { font-family: Arial, Helvetica, sans-serif; }
+body { margin: 0; padding: 14px; background: #fff; color: #202020; }
+.layout { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; max-width: 900px; margin: 0 auto; }
+.introduction, .calculator { grid-column: 1 / -1; }
+.block { min-width: 0; border: 1px dashed #c5c5c5; padding: 7px 9px; background: white; }
+h1, h2 { font-weight: 400; text-align: center; margin: 0 0 8px; }
+h1 { font-size: 24px; }
+h2 { font-size: 18px; }
+p { font-size: 12px; line-height: 1.25; margin: 0 0 6px; }
+p:last-child { margin-bottom: 0; }
+.tank, .diagram { text-align: center; }
+.tank img, .diagram img { display: block; height: 150px; width: auto; max-width: 100%; object-fit: contain; margin: 0 auto; }
+.tank p { margin-top: 3px; line-height: 1.2; }
+a { color: #277fbd; }
+.calculator { min-height: 182px; }
+.calculator h2 { margin-bottom: 9px; }
+.field { display: flex; align-items: center; gap: 4px; margin-bottom: 6px; font-size: 12px; }
+.field label { flex: 0 0 auto; }
+.field input { width: 102px; max-width: 100%; min-width: 0; height: 20px; padding: 1px 4px; border: 1px solid #485d69; border-radius: 0; background: #f5f8fa; font: inherit; }
+.field select { font: inherit; height: 21px; border: 1px solid #485d69; background: #f5f8fa; color: #202020; }
+button { display: block; margin-top: 18px; background: #007da5; border: 1px solid #006480; padding: 5px 8px; border-radius: 0; color: white; font: inherit; font-size: 12px; cursor: pointer; }
+button:hover, button:focus-visible { background: #005a7b; }
+.result { min-height: 16px; margin-top: 9px; font-size: 12px; }
+.result.error { color: #b42318; }
+/* Bootstrap sm breakpoint (576px): first section full width, other three in a row. */
+@media (min-width: 576px) {
+  .layout { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 9px; }
+  .introduction { grid-column: 1 / -1; }
+  .calculator { grid-column: auto; min-height: 182px; }
+}
